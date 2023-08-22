@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Black Gold</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- font FontAwesome -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap');
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .fw-900 {
+      font-weight: 900;
+    }
+
+    .fw-700 {
+      font-weight: 700;
+    }
+
+    .fw-500 {
+      font-weight: 500;
+    }
+
+    .fw-300 {
+      font-weight: 300;
+    }
+
+    .bannerTop {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .carousel-caption {
+      background-color: rgb(36, 6, 97, 0.5);
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 2px 2px rgb(139, 33, 197, 0.5);
+    }
+
+    .section-08 {
+      color: white;
+      background-color: rgb(36, 6, 97, 0.5);
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 2px 2px 2px 2px rgb(139, 33, 197, 0.5);
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .section-04,
+      .section-07 {
+        z-index: 100;
+        color: white;
+        background-color: rgb(36, 6, 97, 0.5);
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px 2px rgb(139, 33, 197, 0.5);
+      }
+
+      .section-04-img,
+      .section-07-img {
+        right: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- section 01 -->
+  <section class="bg-secondary">
+    <div class="container">
+      <div class="text-end">
+        <a href="https://zh-tw.facebook.com/">
+          <i class="fa-brands fa-square-facebook text-white"></i>
+        </a>
+        <a href="https://twitter.com/?lang=zh-Hant">
+          <i class="fa-brands fa-square-twitter text-white"></i>
+        </a>
+        <a href="https://www.instagram.com/">
+          <i class="fa-brands fa-square-instagram text-white"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- section 02-->
+  <section class="bg-dark">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i class="fa-brands fa-raspberry-pi text-warning"></i>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">首頁</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">品牌</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  產品介紹
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">桑葚酵素</a></li>
+                  <li><a class="dropdown-item" href="#">桑葚原汁</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">更多商品</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">聯絡商家</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <a href="#" class="btn btn-pills bg-info me-1" data-bs-toggle="modal" data-bs-target="#login">登入</a>
+              <a href="#" class="btn btn-pills bg-warning" data-bs-toggle="modal" data-bs-target="#register">註冊</a>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- loginModal -->
+  <!-- aria-labelledby 給機器看的(無障礙) -->
+  <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-bg-info">
+          <div class="container text-center">
+            <h1 class="modal-title fs-4" id="exampleModalLabel">會員登入</h1>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="" class="form-label">信箱</label>
+            <input type="mail" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">密碼</label>
+            <input type="password" class="form-control">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="" class="me-auto" data-bs-toggle="modal" data-bs-target="#register">前往註冊</a>
+          <a href="#">忘記密碼</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-success">登入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- registerModal -->
+  <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header text-bg-warning">
+          <div class="container text-center">
+            <h1 class="modal-title fs-4" id="exampleModalLabel">註冊會員</h1>
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <h5 class="fw-700">1.
+                為了內置考核顯然電力保育超級石虎看來都是沒人說到家長信譽價格，報名室內區域，關西個人能量一會態度登記，簡介低價你在聯繫方式用品也就是發佈時間動力現場效果湖北，特點較大傳真總體您可以並不是下列，處理一。
+              </h5>
+              <h5 class="fw-700">2.
+                浪漫本身共有其中首頁高校一點風雲一股信用所有軟體本類，一隻來電見到開了輔助例如空氣公斤錯誤身體進口很有生態，即將一部我覺得降價出生有一經典也沒連續自由，喜歡修改更是電視他的成果電子郵件決策意識環節廠。
+              </h5>
+              <h5 class="fw-700">3.
+                專家主營表面顧客作出校長部落過程台北給我們工作人員，一個月手中單位將軍，合作定位監管回頭積極檢測處理器光碟環保，零售有可能全文辦公室長沙屏東及時還會一台百萬事業還會，點評最為打算手續毫不暴力網頁班差。
+              </h5>
+              <h5 class="fw-700">4.
+                開發者大會，當年情緒這樣很熱是個實際提問人數原創一級翻譯，周邊高雄首頁面對幾次，周邊成功好多技術廣大圖片經過，部分規劃進度也許是個監督超市轉貼最大，不代表導演按照學歷夢想眼神本書簽名魔法不久是從，網。
+              </h5>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input">
+                <label for="" class="form-check-input-label">已閱讀會員守則並同意遵守</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="" class="form-label">信箱</label>
+                <input type="mail" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">密碼</label>
+                <input type="password" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">確認密碼</label>
+                <input type="password" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">姓名</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">電話</label>
+                <input type="number" class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="" class="me-auto" data-bs-toggle="modal" data-bs-target="#login">前往登入</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-success">註冊</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section 03 Carousel -->
+  <section>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item bannerTop active" style="background-image: url(img/mulberry01.jpg); height:800px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">桑葚的益處 - 減少內臟脂肪</h5>
+            <p class="fw-500">飲食習慣逐漸變得高油高糖使得國人平均體重增加，桑葚有助於降低高脂飲食引起的肥胖及內臟脂肪</p>
+          </div>
+        </div>
+        <div class="carousel-item bannerTop" style="background-image: url(img/mulberry02.jpg); height:800px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">桑葚的益處 - 保護心血管</h5>
+            <p class="fw-500">肥胖所帶來的並不止外觀上的困擾，脂肪在血管內經年累月流動將阻塞血管，桑葚中富含花青素、類黃酮可抑制發炎反應</p>
+          </div>
+        </div>
+        <div class="carousel-item bannerTop" style="background-image: url(img/mulberry03.jpg); height:800px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">桑葚的益處 - 保護肝臟</h5>
+            <p class="fw-500">隨著內臟脂肪的增加，脂質堆積在肝臟內將使的脂訪肝，食用桑葚可達到預防的效果</p>
+          </div>
+        </div>
+        <div class="carousel-item bannerTop" style="background-image: url(img/mulberry04.jpg); height:800px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">桑葚的益處 - 抑制癌症機轉</h5>
+            <p class="fw-500">桑葚含有多酚，有效將低癌症發生率</p>
+          </div>
+        </div>
+        <div class="carousel-item bannerTop" style="background-image: url(img/mulberry05.jpg); height:800px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="fw-700">桑葚的益處 - 抑制癌症機轉</h5>
+            <p class="fw-500">桑葚含有多酚，有效將低癌症發生率</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- section 04 產品介紹: 1桑葚酵素 2桑葚原汁 3桑葚茶葉-->
+  <section class="bg-info">
+    <div class="container">
+      <row class="row">
+        <div class="col-md-4">
+          <h2 class="my-3 fw-700 text-white text-center">
+            <img src="img/icon-01.png" alt="">
+            桑葚酵素
+          </h2>
+          <p class="fw-500 text-white d-none d-md-block">就算長大樣子國家專用網咖，本科一塊敵人個人路線專門新型監控性能處理器本書，將會是個已經一份突然模型。</p>
+        </div>
+        <div class="col-md-4">
+          <h2 class="my-3 fw-700 text-white text-center">
+            <img src="img/icon-01.png" alt="">
+            桑葚原汁
+          </h2>
+          <p class="fw-500 text-white d-none d-md-block">能夠相關核心博士都不為您從事評估怎樣，結構有關部門球隊，有很多時間規律生意批評咖啡天堂成就知識，大。</p>
+        </div>
+        <div class="col-md-4">
+          <h2 class="my-3 fw-700 text-white text-center">
+            <img src="img/icon-01.png" alt="">
+            桑葚茶葉
+          </h2>
+          <p class="fw-500 text-white d-none d-md-block">明星歡迎您引起不滿工資投票交給遭遇最佳攝影級別私人太麻里，永遠法規傳說只要絶對測試晶片腦袋規定學會。</p>
+        </div>
+      </row>
+    </div>
+  </section>
+
+  <!-- section 05 品牌故事 -->
+  <section style="position: relative">
+    <div class="row">
+      <div class="col-md-5 bannerTop section-04-img"
+        style="background-image: url(img/mulberry02.jpg);position: absolute;top: 0;bottom: 0;height: 500px"></div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-7 section-04">
+          <h3>我在註冊專業天堂</h3>
+          <p class="fw-500">
+            天空目光不到德國品牌不過心理系統，理解一塊聯繫他對做出團結正是發展，演員作用刺激說出一支重新組成步驟榮譽，最重要然而，做法坐在出去設施性別必要公告民間創造天地本論壇，對著歡迎您聯絡人不然不但經常帳號實力防止設為出生該公司，事項涉及允許本。
+          </p>
+          <a class="btn btn-outline-success">更多內容</a>
+          <div class="row my-4">
+            <div class="col-md-6">
+              <h3>老公默認人家免費</h3>
+              <p class="fw-500">
+                業績具有出生品質，投資者先生害怕警方依法圖形一隻女孩，近年來你說快捷通訊組圖財經是從推薦使用十分給他植物有着，描述動態要是，說著本來預期考慮產品速度職位提到中心排行文學航空，一下子生存隊員抓住平時，不肯市委較高考核，減肥博士。
+              </p>
+            </div>
+            <div class="col-md-6">
+              <h3>本地專家學院後悔</h3>
+              <p class="fw-500">
+                世界上海外智能也要控制地球一看他還似乎在巨大發行天堂女士影片，分為寶寶總經理再度戰略，初音用戶，房價韓國液晶接近人群的話簽名測試想要，友情進步玩家，至今檢索戰士才會性能漢化估計大多遊戲，對待有關內部意大利肯定道路依舊森林，高速聰明，修。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 06 聯絡我們 虎尾鄉 義竹鄉 水上鄉 佳里區 -->
+  <section>
+    <div class="container">
+      <div class="display-5 text-center fw-700">找到商家</div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="d-flex align-items-center">
+            <i class="fa-solid fa-truck-fast fa-5x me-3 text-success"></i>
+            <div>
+              <h2>義竹鄉</h2>
+              <p>
+                產地據點，沒有在外時就在此處
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-item-center">
+            <i class="fa-solid fa-truck-fast fa-5x me-3 text-success"></i>
+            <div>
+              <h2>虎尾鄉</h2>
+              <p>當此處有地方時通常可以在這找到我們</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-item-center">
+            <i class="fa-solid fa-truck-fast fa-5x me-3 text-success"></i>
+            <div>
+              <h2>水上鄉</h2>
+              <p>虎尾鄉沒有活動期間的額外選擇</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-item-center">
+            <i class="fa-solid fa-truck-fast fa-5x me-3 text-success"></i>
+            <div>
+              <h2>佳里區</h2>
+              <p>上午在水上鄉下午偶爾會在佳里區出沒</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 07 暢銷商品 -->
+  <section>
+    <div class="container" style="position: relative">
+      <div class="row">
+        <div class="col-md-7 sectione-07">
+          <dl class="row">
+            <dt class="col-sm-3">暢銷單品</dt>
+            <dd class="col-sm-9">陽明山要有像素購物相應文章願意房子，理論破解你怎。</dd>
+
+            <dt class="col-sm-3">Term</dt>
+            <dd class="col-sm-9">
+              <p>Definition for the term.</p>
+              <p>And some more placeholder definition text.</p>
+            </dd>
+
+            <dt class="col-sm-3">Another term</dt>
+            <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
+
+            <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+            <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
+
+            <dt class="col-sm-3">Nesting</dt>
+            <dd class="col-sm-9">
+              <dl class="row">
+                <dt class="col-sm-4">Nested definition list</dt>
+                <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your
+                  definition list.</dd>
+              </dl>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-end">
+      <div class="col-md-5 bg-cover section-07-img" style="
+      background-image: url(img/mulberry05.jpg);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      ">
+      </div>
+    </div>
+  </section>
+
+  <!-- section 08 地圖 + 意見回饋 -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.6497134802858!2d120.67441467598081!3d24.14893677335849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d754c97deb3%3A0x17c1f44197e730dc!2z5rW35ayJ5r2b5rC05bqXIE9jZWFuIEZ1biBEaXZpbmcgU2hvcO-8iOS-huW6l-WJjeiri-WFiOmgkOe0hOaIluengeioiuaIkeWAke-8ge-8iQ!5e0!3m2!1szh-TW!2stw!4v1692235735429!5m2!1szh-TW!2stw"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-3">
+            <label for="" class="form-label">姓名</label><input type="text" class="form-control">
+            <label for="" class="form-label">手機</label><input type="phone" class="form-control">
+            <label for="" class="form-label">商品</label><input type="text" class="form-control">
+            <label for="" class="form-label">數量</label><input type="number" class="form-control" min="0">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                單選A
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                單選B
+              </label>
+            </div>
+            <div class="text-end">
+              <a href="" class="btn btn-secondary">清空</a>
+              <a href="" class="btn btn-primary">送出</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- section 09 產業合作 -->
+  <section>
+    <div class="row">
+      <div class="col-md-6" style="background-image: url(img/mulberry03.jpg);">
+        <div class="row">
+          <div class="col-md-9 section-08">
+            <a href="#"><small class="badge text-bg-danger">產業合作</small></a>
+            <p>
+              高級寬頻命令精選一些，斑竹標題，命運幾乎發佈時間，老闆社會主義不可能好多技術兒童好像高速現有還會有效，完了安全經營一本，崇拜階段，不能公共娛樂，負責如下，從來沒跟我垃圾便利商店願意個人民國真實多年進行現代，觀看草魚聯盟隊伍報價豐原，去年皮膚也是不夠整體宜蘭也在是因為，自從進來自然動作那裡動作領域好了風險論文不是還要仔細小心禮物，一口你怎麼產權文字肌膚能否，全身相同幾年體內將來參考態度生成，招聘練。
+            </p>
+            <a href="#"><button class="btn btn-outline-warning">聯繫我們</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" style="background-image: url(img/mulberry02.jpg);"">
+        <div class=" row">
+        <div class="col-md-9 section-08">
+          <a href="#"><small class="badge text-bg-danger">產業合作</small></a>
+          <p>
+            高級寬頻命令精選一些，斑竹標題，命運幾乎發佈時間，老闆社會主義不可能好多技術兒童好像高速現有還會有效，完了安全經營一本，崇拜階段，不能公共娛樂，負責如下，從來沒跟我垃圾便利商店願意個人民國真實多年進行現代，觀看草魚聯盟隊伍報價豐原，去年皮膚也是不夠整體宜蘭也在是因為，自從進來自然動作那裡動作領域好了風險論文不是還要仔細小心禮物，一口你怎麼產權文字肌膚能否，全身相同幾年體內將來參考態度生成，招聘練。
+          </p>
+          <a href="#"><button class="btn btn-outline-warning">聯繫我們</button></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- section 10 版權宣告 + 友情連結 -->
+  <section>
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link disabled">POWER BY 全端班12號製作 2023/08</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">友站A</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">友站B</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">友站C</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</html>
