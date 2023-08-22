@@ -5,10 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Black Gold</title>
+  <!-- bootstrap v5.2.3 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <!-- font FontAwesome -->
   <link rel="stylesheet" href="./css/all.min.css">
+  <!-- counter-Up -->
+  <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap');
 
@@ -53,6 +56,44 @@
       box-shadow: 2px 2px 2px 2px rgb(139, 33, 197, 0.5);
     }
 
+    .timeline-section {
+      position: relative;
+    }
+
+    /* 常與position相互搭配 */
+    .timeline-section::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      background-image: linear-gradient(180deg, rgba(255, 224, 224, 0.3), rgba(255, 224, 224, 0.9));
+      width: 3px;
+    }
+
+    .timeline-section-point {
+      position: relative;
+    }
+
+    .timeline-section-point:hover::before {
+      width: 25px;
+      height: 25px;
+    }
+
+    .timeline-section-point::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      background-color: rgb(255, 132, 132);
+      border-radius: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 7px solid #ffeaa4;
+    }
+
     @media screen and (max-width: 768px) {
 
       .section-04,
@@ -68,6 +109,11 @@
       .section-04-img,
       .section-07-img {
         right: 0;
+      }
+
+      .timeline-section::before,
+      .timeline-section-point::before {
+        display: none;
       }
     }
   </style>
@@ -287,61 +333,135 @@
       </button>
     </div>
   </section>
-
+  <!-- timeline -->
+  <section>
+    <div class="container-fluid p-5 bg-primary bg-opacity-25">
+      <div class="row">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+          <h2 class="p-3 fw-700 text-bg-secondary text-opacity-75 rounded-1">義竹農產品產銷合作社</h2>
+        </div>
+        <div class="col-md-6">
+          <div class="timeline-section">
+            <div class="row align-items-center timeline-section-point ">
+              <div class="col-md-6  text-bg-dark rounded-4">
+                <div class="textSelf">
+                  <h2 class="fw-700">草創期間</h2>
+                  <p class="fw-500">沒想到東京歌手第一高速衝突變得表達接着考察大門女兒尚未相信。</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="bannerTop" style="background-image: url(img/mulberry02.jpg);height: 25vh;">
+                </div>
+              </div>
+            </div>
+            <div class="row align-items-center flex-row-reverse timeline-section-point">
+              <div class="col-md-6  text-bg-dark rounded-4">
+                <div class="textSelf">
+                  <h2 class="fw-700">主力農產品</h2>
+                  <p class="fw-500">沒想到東京歌手第一高速衝突變得表達接着考察大門女兒尚未相信。</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="bannerTop" style="background-image: url(img/mulberry03.jpg);height: 25vh;"></div>
+              </div>
+            </div>
+            <div class="row align-items-center timeline-section-point">
+              <div class="col-md-6  text-bg-dark rounded-4">
+                <div class="textSelf">
+                  <h2 class="fw-700">成立產銷班</h2>
+                  <p class="fw-500">沒想到東京歌手第一高速衝突變得表達接着考察大門女兒尚未相信。</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="bannerTop" style="background-image: url(img/mulberry04.jpg);height: 25vh;"></div>
+              </div>
+            </div>
+            <div class="row align-items-center timeline-section-point flex-row-reverse">
+              <div class="col-md-6  text-bg-dark rounded-4">
+                <div class="textSelf">
+                  <h2 class="fw-700">孤支變群英</h2>
+                  <p class="fw-500">沒想到東京歌手第一高速衝突變得表達接着考察大門女兒尚未相信。</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="bannerTop" style="background-image: url(img/mulberry04.jpg);height: 25vh;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- counter-Up -->
+  <section>
+    <div class="container-fluid py-5 bg-success bg-opacity-25">
+      <div class="row">
+        <div class="col-4 text-center">
+          <h4 class="fw-500">年銷量</h4>
+          <h2 class="fw-700 grandCounter">500/支</h2>
+        </div>
+        <div class="col-4 text-center">
+          <h4 class="fw-500">單季銷售</h4>
+          <h2 class="fw-700 seasonSale">60/支</h2>
+        </div>
+        <div class="col-4 text-center">
+          <h4 class="fw-500">來訪人次</h4>
+          <h2 class="fw-700 askPerson">10000/人</h2>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- section 04 產品介紹: 1桑葚酵素 2桑葚原汁 3桑葚茶葉-->
   <section class="bg-info">
     <div class="container">
-      <row class="row">
-        <div class="col-md-4">
+      <row class="row text-center">
+        <div class="col-md-4 align-items-center">
           <h2 class="my-3 fw-700 text-white text-center">
-            <img src="img/icon-01.png" alt="">
             桑葚酵素
           </h2>
-          <p class="fw-500 text-white d-none d-md-block">就算長大樣子國家專用網咖，本科一塊敵人個人路線專門新型監控性能處理器本書，將會是個已經一份突然模型。</p>
+          <p class="fs-3 fw-900 text-danger d-none d-md-block">詢問度最高</p>
         </div>
         <div class="col-md-4">
           <h2 class="my-3 fw-700 text-white text-center">
-            <img src="img/icon-01.png" alt="">
             桑葚原汁
           </h2>
-          <p class="fw-500 text-white d-none d-md-block">能夠相關核心博士都不為您從事評估怎樣，結構有關部門球隊，有很多時間規律生意批評咖啡天堂成就知識，大。</p>
+          <p class="fs-3 fw-900 text-primary d-none d-md-block">客群最廣</p>
         </div>
         <div class="col-md-4">
           <h2 class="my-3 fw-700 text-white text-center">
-            <img src="img/icon-01.png" alt="">
             桑葚茶葉
           </h2>
-          <p class="fw-500 text-white d-none d-md-block">明星歡迎您引起不滿工資投票交給遭遇最佳攝影級別私人太麻里，永遠法規傳說只要絶對測試晶片腦袋規定學會。</p>
+          <p class="fs-3 fw-900 text-success d-none d-md-block">最新推出</p>
         </div>
       </row>
     </div>
   </section>
 
   <!-- section 05 品牌故事 -->
-  <section style="position: relative">
-    <div class="row">
+  <section>
+    <div class="row" style="position: relative">
       <div class="col-md-5 bannerTop section-04-img"
-        style="background-image: url(img/mulberry02.jpg);position: absolute;top: 0;bottom: 0;height: 500px"></div>
+        style="background-image: url(img/mulberry02.jpg);position: absolute;top: 0;bottom: 0;height: 300px"></div>
     </div>
     <div class="container">
       <div class="row justify-content-end">
         <div class="col-md-7 section-04">
           <h3>我在註冊專業天堂</h3>
           <p class="fw-500">
-            天空目光不到德國品牌不過心理系統，理解一塊聯繫他對做出團結正是發展，演員作用刺激說出一支重新組成步驟榮譽，最重要然而，做法坐在出去設施性別必要公告民間創造天地本論壇，對著歡迎您聯絡人不然不但經常帳號實力防止設為出生該公司，事項涉及允許本。
+            天空目光不到德國品牌不過心理系統，理解一塊聯繫他對做出團結正是發展，演員作用刺激說出一支重新組成步驟榮譽。
           </p>
           <a class="btn btn-outline-success">更多內容</a>
           <div class="row my-4">
             <div class="col-md-6">
               <h3>老公默認人家免費</h3>
               <p class="fw-500">
-                業績具有出生品質，投資者先生害怕警方依法圖形一隻女孩，近年來你說快捷通訊組圖財經是從推薦使用十分給他植物有着，描述動態要是，說著本來預期考慮產品速度職位提到中心排行文學航空，一下子生存隊員抓住平時，不肯市委較高考核，減肥博士。
+                業績具有出生品質，投資者先生害怕警方依法圖形一隻女孩，近年來你說快捷通訊組圖描述動態要是減肥博士。
               </p>
             </div>
             <div class="col-md-6">
               <h3>本地專家學院後悔</h3>
               <p class="fw-500">
-                世界上海外智能也要控制地球一看他還似乎在巨大發行天堂女士影片，分為寶寶總經理再度戰略，初音用戶，房價韓國液晶接近人群的話簽名測試想要，友情進步玩家，至今檢索戰士才會性能漢化估計大多遊戲，對待有關內部意大利肯定道路依舊森林，高速聰明，修。
+                世界上海外智能也要控制地球一看他還似乎在巨大發行天堂女士影片，分為寶寶總經理再度戰略初音用戶。
               </p>
             </div>
           </div>
@@ -354,9 +474,9 @@
   <section>
     <div class="container">
       <div class="display-5 text-center fw-700">找到商家</div>
-      <div class="row">
+      <div class="row my-3">
         <div class="col-md-6">
-          <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center my-3">
             <i class="fa-solid fa-truck-fast fa-5x me-3 text-success"></i>
             <div>
               <h2>義竹鄉</h2>
@@ -367,7 +487,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="d-flex align-item-center">
+          <div class="d-flex align-item-center my-3">
             <i class="fa-solid fa-truck-fast fa-5x me-3 text-success"></i>
             <div>
               <h2>虎尾鄉</h2>
@@ -376,7 +496,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="d-flex align-item-center">
+          <div class="d-flex align-item-center my-3">
             <i class="fa-solid fa-truck-fast fa-5x me-3 text-success"></i>
             <div>
               <h2>水上鄉</h2>
@@ -385,7 +505,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="d-flex align-item-center">
+          <div class="d-flex align-item-center my-3">
             <i class="fa-solid fa-truck-fast fa-5x me-3 text-success"></i>
             <div>
               <h2>佳里區</h2>
@@ -401,42 +521,28 @@
   <section>
     <div class="container" style="position: relative">
       <div class="row">
-        <div class="col-md-7 sectione-07">
+        <div class="col-md-7 section-07">
           <dl class="row">
-            <dt class="col-sm-3">暢銷單品</dt>
-            <dd class="col-sm-9">陽明山要有像素購物相應文章願意房子，理論破解你怎。</dd>
+            <dt class="col-sm-3">土地友善農法</dt>
+            <dd class="col-sm-9">零除草劑、零農藥、多人力、多健康</dd>
 
-            <dt class="col-sm-3">Term</dt>
+            <dt class="col-sm-3">草木共生</dt>
             <dd class="col-sm-9">
-              <p>Definition for the term.</p>
-              <p>And some more placeholder definition text.</p>
+              <p>人工移除雜草</p>
+              <p>降低土壤傷害，沒有農藥殘留，即採即食！</p>
             </dd>
 
-            <dt class="col-sm-3">Another term</dt>
-            <dd class="col-sm-9">This definition is short, so no extra paragraphs or anything.</dd>
-
-            <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-            <dd class="col-sm-9">This can be useful when space is tight. Adds an ellipsis at the end.</dd>
-
-            <dt class="col-sm-3">Nesting</dt>
-            <dd class="col-sm-9">
-              <dl class="row">
-                <dt class="col-sm-4">Nested definition list</dt>
-                <dd class="col-sm-8">I heard you like definition lists. Let me put a definition list inside your
-                  definition list.</dd>
-              </dl>
-            </dd>
           </dl>
         </div>
       </div>
-    </div>
-    <div class="row justify-content-end">
-      <div class="col-md-5 bg-cover section-07-img" style="
-      background-image: url(img/mulberry05.jpg);
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      ">
+      <div class="row justify-content-end">
+        <div class="col-md-5 bannerTop section-07-img" style="
+        background-image: url(img/mulberry_leave02.jpg);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        ">
+        </div>
       </div>
     </div>
   </section>
@@ -445,12 +551,12 @@
   <section>
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" style="position: relative;">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.6497134802858!2d120.67441467598081!3d24.14893677335849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d754c97deb3%3A0x17c1f44197e730dc!2z5rW35ayJ5r2b5rC05bqXIE9jZWFuIEZ1biBEaXZpbmcgU2hvcO-8iOS-huW6l-WJjeiri-WFiOmgkOe0hOaIluengeioiuaIkeWAke-8ge-8iQ!5e0!3m2!1szh-TW!2stw!4v1692235735429!5m2!1szh-TW!2stw"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.5633005553195!2d120.23997709500853!3d23.336511019464453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e83f331fda713%3A0x7a7d87e02d8dbfba!2z5ZiJ576p57ij576p56u56YSJ5YWs5omA!5e0!3m2!1szh-TW!2stw!4v1692687492903!5m2!1szh-TW!2stw"
+            width="100%" height="450" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         <div class="col-md-6">
           <div class="mb-3">
             <label for="" class="form-label">姓名</label><input type="text" class="form-control">
@@ -483,7 +589,7 @@
   <section>
     <div class="row">
       <div class="col-md-6" style="background-image: url(img/mulberry03.jpg);">
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-md-9 section-08">
             <a href="#"><small class="badge text-bg-danger">產業合作</small></a>
             <p>
@@ -494,7 +600,7 @@
         </div>
       </div>
       <div class="col-md-6" style="background-image: url(img/mulberry02.jpg);"">
-        <div class=" row">
+        <div class="row justify-content-center">
         <div class="col-md-9 section-08">
           <a href="#"><small class="badge text-bg-danger">產業合作</small></a>
           <p>
@@ -529,5 +635,31 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script>
+  const counterUp = window.counterUp.default
+
+  const callback = entries => {
+    entries.forEach(entry => {
+      const el = entry.target
+      if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+        counterUp(el, {
+          duration: 2000,
+          delay: 16,
+        })
+        el.classList.add('is-visible')
+      }
+    })
+  }
+
+  const IO = new IntersectionObserver(callback, { threshold: 1 })
+
+  // 只會抓到第一筆
+  const elGrand = document.querySelector('.grandCounter')
+  IO.observe(elGrand)
+  const todaySale = document.querySelector('.seasonSale')
+  IO.observe(todaySale)
+  const askPerson = document.querySelector('.askPerson')
+  IO.observe(askPerson)
+</script>
 
 </html>
